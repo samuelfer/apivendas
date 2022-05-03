@@ -1,6 +1,7 @@
-import { Router } from "express";
-import { celebrate, Joi, Segments } from "celebrate";
-import UserController from "../controllers/UserController";
+import { celebrate, Joi, Segments } from 'celebrate';
+import { Router } from 'express';
+
+import UserController from '../controllers/UserController';
 
 const userRouter = Router();
 const userController = new UserController();
