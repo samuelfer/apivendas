@@ -35,11 +35,22 @@ export class CreateUserTokens1651619685916 implements MigrationInterface {
               default: 'now()',
             },
           ],
+          foreignKeys: [
+            {
+              name: 'TokenUser',
+              referencedTableName: 'users',
+              referencedColumnNames: ['id'],
+              columnNames: ['user_id'],
+              onDelete: 'CASCADE',
+              onUpdate: 'CASCADE',
+            }
+          ]
         })
     );
   }
 
-    public async down(queryRunner: QueryRunner): Promise<void> {
-    }
+  public async down(queryRunner: QueryRunner): Promise<void> {
+    await queryRunner.dropTable('user_tokens');
+  }
 
 }
