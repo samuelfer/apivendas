@@ -40,5 +40,4 @@ export class CreateCustomers1653245851712 implements MigrationInterface {
     public async down(queryRunner: QueryRunner): Promise<void> {
       await queryRunner.dropTable('customers');
     }
-
 }
