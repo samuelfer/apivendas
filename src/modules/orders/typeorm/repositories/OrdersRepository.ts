@@ -1,4 +1,4 @@
-import { Customer } from '@modules/customers/typeorm/entities/Customer';
+import Customer from '@modules/customers/typeorm/entities/Customer';
 import { EntityRepository, Repository } from "typeorm";
 import Order from "../entities/Order";
 
@@ -14,7 +14,7 @@ interface IRequest {
 }
 
 @EntityRepository(Order)
-class OrderRepository extends Repository<Order> {
+class OrdersRepository extends Repository<Order> {
 
   public async findById(id: string): Promise<Order | undefined> {
     const order = this.findOne(id, {
@@ -36,5 +36,5 @@ class OrderRepository extends Repository<Order> {
   }
 }
 
-export default OrderRepository;
+export default OrdersRepository;
 
