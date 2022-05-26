@@ -1,6 +1,6 @@
 import { Response, Request } from 'express';
-import CreateOrderService from '../typeorm/services/CreateOrderService';
-import ShowOrderService from '../typeorm/services/ShowOrderService';
+import CreateOrderService from '../services/CreateOrderService';
+import ShowOrderService from '../services/ShowOrderService';
 
 export default class OrderController {
 
